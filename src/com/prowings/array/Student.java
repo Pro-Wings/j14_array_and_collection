@@ -1,6 +1,6 @@
 package com.prowings.array;
 
-public class Student {
+public class Student  implements Comparable<Student>{
 	
 	private int roll;
 	private String name;
@@ -28,6 +28,20 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [roll=" + roll + ", name=" + name + "]";
+	}
+	@Override
+	public int compareTo(Student o) {
+		//sort by roll number
+//		if(this.roll > o.roll)
+//			return 2;
+//		else if(this.roll == o.roll)
+//			return 0;
+//		else
+//			return -2;
+		
+		// sort by name
+		return this.name.compareTo(o.name);
+		
 	}
 	
 	
